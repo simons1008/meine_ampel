@@ -16,7 +16,7 @@ Wenn die Codezeilen mit den Timern auskommentiert sind, werden die Zustandsüber
 
 ## Quellen
 Die Idee stammt von hier: https://github.com/hobbyelektroniker/StateMachine
-In diesem Repository wird eine Ampel mit dem Arduino programmiert. 
+In diesem Repository wird eine Ampel mit dem Arduino angesteuert. 
 
 Die Programme my_sm7_rev0.py bis rev2.py sind Portierungen des ursprünglichen Programms sm7.ino von C/C++ nach Python.
 
