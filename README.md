@@ -16,11 +16,11 @@ Wenn die Codezeilen mit den Timern auskommentiert sind, werden die Zustandsüber
 
 ## Quellen
 Die Grundlage stammt von hier: https://github.com/hobbyelektroniker/StateMachine
-In diesem Repository wird wird die Ansteuerung einer Ampel mit einer Statemachine gezeigt. Die Programme sind in C/C++ geschrieben und laufen auf dem Arduino. 
+In diesem Repository wird die Ansteuerung einer Ampel mit einer Statemachine gezeigt. Die Programme sind in C/C++ geschrieben und laufen auf dem Arduino. 
 
 Die Programme my_sm7_rev0.py bis rev2.py sind Portierungen des ursprünglichen Programms sm7.ino von C/C++ nach Python.
 
-Die letzte Version des Programs my_sm7_rev2.py realisiert die Statemachine mit Funktionen aus folgenden Bibliotheken: https://github.com/jrullan/micropython_statemachine und https://github.com/jrullan/micropython_neotimer
+Die letzte Version des Programms my_sm7_rev2.py realisiert die Statemachine mit Funktionen aus folgenden Bibliotheken: https://github.com/jrullan/micropython_statemachine und https://github.com/jrullan/micropython_neotimer
 
 ## Dank
 Ich danke den Autoren "hobbyelektroniker" und "jrullan" für ihre hilfreichen Beiträge. 
