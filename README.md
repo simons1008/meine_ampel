@@ -3,7 +3,7 @@
 Die Programme my_sm7_rev0.py bis rev2.py zeigen die Ansteuerung einer Ampel mit einer Statemachine. Die Programme sind in Python geschrieben und laufen auf einem ESP32 DevKit mit MicroPython. 
 
 ## Externe Hardware
-3 LEDs sind über Widerstände an digitale Ausgänge des ESP32 angeschlossen. Sie simulieren die Ampel. 
+3 LEDs sind über Widerstände an digitale Ausgänge des ESP32 angeschlossen.  
 
 2 Tasten sind direkt an digitale Eingänge des ESP32 angeschlossen. 
 
