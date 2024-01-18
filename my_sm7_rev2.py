@@ -3,8 +3,9 @@
 # Nach: Der Hobbyelektroniker, 12.06.2018
 # Von C/C++ nach Python portiert, 11.08.2022 (Si)
 # Zustand KEINE durch GELB_BLINKEN ersetzt, 04.12.2022 (Si)
+# Zustandswechel GELB_BLINKEN - ROT erst nach 5 Sekunden, 18.01.2024 (Si)
 # Einsatz der Bibliothek statemachine
-# Für die Aktionen der Tasten: Zeilen 104 bis 108 auskommentieren
+# Für die Aktionen der Tasten: Zeilen 105 bis 109 auskommentieren
 
 # Import der Methoden für den Zustandsautomaten
 from neotimer import *
@@ -100,12 +101,12 @@ ROT_GELB.attach_transition(taste1_gedrueckt, GRUEN)
 GRUEN.attach_transition(taste1_gedrueckt, GELB)
 GELB.attach_transition(taste1_gedrueckt, ROT)
 
-# # Übergänge durch Timer
-# GELB_BLINKEN.attach_transition(myTimer_1000.repeat_execution, ROT)
-# ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
-# ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
-# GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
-# GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
+# Übergänge durch Timer
+GELB_BLINKEN.attach_transition(myTimer_5000.repeat_execution, ROT)
+ROT.attach_transition(myTimer_5000.repeat_execution, ROT_GELB)
+ROT_GELB.attach_transition(myTimer_1000.repeat_execution, GRUEN)
+GRUEN.attach_transition(myTimer_2000.repeat_execution, GELB) 
+GELB.attach_transition(myTimer_1000.repeat_execution, ROT)
 
 # Übergänge nach GELB_BLINKEN
 ROT.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
@@ -115,4 +116,4 @@ GELB.attach_transition(taste2_gedrueckt, GELB_BLINKEN)
 
 # Loop
 while True:
-    state_machine.run()                        
+    state_machine.run()                         
