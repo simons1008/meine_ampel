@@ -6,7 +6,7 @@
 # Zustandswechel GELB_BLINKEN - ROT erst nach 5 Sekunden, 18.01.2024 (Si)
 # Timer 400 ms für Debouncing, 03.01.2025 (Si)
 # Einsatz der Bibliothek statemachine
-# Für die Aktionen der Tasten: Zeilen 105 bis 109 auskommentieren
+# Für die periodische Ausführung: Zeilen 40 bis 42 und 108 bis 112 aktivieren
 
 # Import der Methoden für den Zustandsautomaten
 from neotimer import *
@@ -33,11 +33,13 @@ state_machine = StateMachine()
 # Timer 400 ms für Debouncing
 myTimer_400 = Neotimer(400)
 
-# Timer 500 ms, 1000 ms, 2000 ms, 5000 ms für periodische Ausführung
+# Timer 500 ms für das Blinken
 myTimer_500 = Neotimer(500)
-myTimer_1000 = Neotimer(1000)
-myTimer_2000 = Neotimer(2000)
-myTimer_5000 = Neotimer(5000)
+
+# Timer 1000 ms, 2000 ms, 5000 ms für periodische Ausführung
+# myTimer_1000 = Neotimer(1000)
+# myTimer_2000 = Neotimer(2000)
+# myTimer_5000 = Neotimer(5000)
 
 #### Funktionen in den Zuständen ####
 # Bis zum Zustandswechsel wird die Funktion wiederholt aufgerufen
