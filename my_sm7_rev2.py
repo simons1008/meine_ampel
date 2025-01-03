@@ -4,6 +4,7 @@
 # Von C/C++ nach Python portiert, 11.08.2022 (Si)
 # Zustand KEINE durch GELB_BLINKEN ersetzt, 04.12.2022 (Si)
 # Zustandswechel GELB_BLINKEN - ROT erst nach 5 Sekunden, 18.01.2024 (Si)
+# Timer 400 ms für Debouncing, 03.01.2025 (Si)
 # Einsatz der Bibliothek statemachine
 # Für die Aktionen der Tasten: Zeilen 105 bis 109 auskommentieren
 
@@ -29,8 +30,8 @@ taste2 = Pin(19, Pin.IN, Pin.PULL_UP)
 # Objekt state_machine erzeugen
 state_machine = StateMachine()
 
-# Timer 250 ms für Debouncing
-myTimer_250 = Neotimer(250)
+# Timer 400 ms für Debouncing
+myTimer_400 = Neotimer(400)
 
 # Timer 500 ms, 1000 ms, 2000 ms, 5000 ms für periodische Ausführung
 myTimer_500 = Neotimer(500)
@@ -74,14 +75,14 @@ def gelb():
 
 # Taste1 gedrückt?
 def taste1_gedrueckt():
-    if myTimer_250.debounce_signal(taste1.value() == 0):
+    if myTimer_400.debounce_signal(taste1.value() == 0):
         return True
     else:
         return False
 
 # Taste2 gedrückt?
 def taste2_gedrueckt():
-    if myTimer_250.debounce_signal(taste2.value() == 0):
+    if myTimer_400.debounce_signal(taste2.value() == 0):
         return True
     else:
         return False
