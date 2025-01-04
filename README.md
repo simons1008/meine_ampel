@@ -10,9 +10,9 @@ Die Programme my_sm7_rev0.py bis rev2.py zeigen die Ansteuerung einer Ampel mit 
 ## Funktionen der Ampel
 Die 3 LEDs simulieren die Ampel. 
 
-Timer steuern die Zustandsübergänge der Ampel. 
- 
-Wenn die Codezeilen mit den Timern auskommentiert sind, werden die Zustandsübergänge durch Tasten gesteuert. Taste1 schaltet durch die Zustände der Ampel. Taste2 schaltet in den Grundzustand. 
+Die Tasten steuern die Zustandsübergänge der Ampel. Taste1 schaltet durch die Zustände der Ampel. Taste2 schaltet in den Grundzustand. 
+
+Wenn die Codezeilen mit den Timern aktiviert sind, werden die Zustandsübergänge der Ampel durch Timer gesteuert. 
 
 ## Quellen
 Die Grundlage stammt von hier: https://github.com/hobbyelektroniker/StateMachine
