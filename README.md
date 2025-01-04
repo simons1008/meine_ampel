@@ -8,7 +8,7 @@ Die Programme my_sm7_rev0.py bis rev2.py zeigen die Ansteuerung einer Ampel mit 
 2 Tasten sind direkt an digitale Eingänge des ESP32 angeschlossen. 
 
 ## Funktionen der Ampel
-Die 3 LEDs simulieren die Ampel. 
+Die 3 LEDs simulieren die Ampel.  
 
 Die Tasten steuern die Zustandsübergänge der Ampel. Taste1 schaltet durch die Zustände der Ampel. Taste2 schaltet in den Grundzustand. 
 
